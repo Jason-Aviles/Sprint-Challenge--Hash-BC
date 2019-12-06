@@ -45,8 +45,8 @@ def valid_proof(last_hash, proof):
 
     # TODO: Your code here!
 # don't hash last hash
-    guess = f'{last_hash}{proof}'.encode()
-    #guess = f'{proof}'.encode()
+    #guess = f'{last_hash}{proof}'.encode()
+    guess = f'{proof}'.encode()
 
     guess_hash = hashlib.sha256(guess).hexdigest()
     return guess_hash[:6] == last_hash[-6:]
